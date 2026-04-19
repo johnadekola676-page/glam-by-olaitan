@@ -17,8 +17,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: glambyolaitan
-          directory: "Glam By Olaitan"
-          # Sync environment variables
-          vars: |
-            DATABASE_URL=${{ secrets.DATABASE_URL }}
+          command: pages deploy "Glam By Olaitan" --project-name=glambyolaitan
+          # Note: Env vars for Pages are best managed in the Cloudflare Dashboard, 
+          # but we can also use wrangler to set them during deploy if needed.
