@@ -775,6 +775,15 @@
         // Runtime config — Cloudflare Pages Functions can inject this
         // via a script tag or edge function. Fallback to hardcoded value.
         window.__ENV__ = window.__ENV__ || {};
+
+        // FAILSAFE: Ensure loader disappears even if JS fails
+        setTimeout(() => {
+            const loader = document.getElementById('page-loader');
+            if (loader && !loader.classList.contains('hidden')) {
+                loader.classList.add('hidden');
+                console.log('Loader hidden by failsafe.');
+            }
+        }, 5000); 
     </script>
     <script src="chat.js"></script>
 </body>
