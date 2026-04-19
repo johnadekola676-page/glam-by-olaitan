@@ -1,0 +1,22 @@
+# Secrets and Env
+.env
+.env.local
+.dev.vars
+.wrangler
+node_modules
+dist
+.DS_Store
+
+# Agent Workspace Temp/Private Files
+AgentVault/
+SETUP_KEYS_GUIDE.md
+live_audit.js
+snap_preview.js
+e2e_test.js
+mock_logic_test.js
+test-connection.js
+audit_home.png
+local_preview.png
+chat_preview.png
+test_error.png
+test_step_*.png
